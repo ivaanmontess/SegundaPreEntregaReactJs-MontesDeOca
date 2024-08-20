@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "iPhone 11",
+        "price": 300,
+        "image": "/assets/img/11.webp",
+        "stock": 10,
+        "category":"Apple",
+        "description": "iPhone 64gb 100% bateria"
+
+    },
+    {
+        "id": 2,
+        "name": "iPhone XS ",
+        "price": 100,
+        "image": "/assets/img/xs.jpg",
+        "stock": 10,
+        "category":"Apple",
+        "description": "iPhone XS 64gb 100% bateria"
+
+    },
+    {
+        "id": 3,
+        "name": "iPhone 11 PRO MAX",
+        "price": 450,
+        "image": "/assets/img/11-pro-max-modelos.jpg",
+        "stock": 10,
+        "category":"Apple",
+        "description": "iPhone PRO MAX 64gb 100% bateria"
+
+    },
+    {
+        "id": 4,
+        "name": "iPhone X",
+        "price": 200,
+        "image": "/assets/img/X.jpg",
+        "stock": 10,
+        "category":"Apple",
+        "description": "iPhone X 64gb 100% bateria"
+
+    }
+]
