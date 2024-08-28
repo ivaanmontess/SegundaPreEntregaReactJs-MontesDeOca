@@ -22,6 +22,7 @@ const ItemDetailContainer = () => {
         }
         fetchData()
     },[id])
+    console.log(product)
   return (
     <div>
         {product == undefined ? <Spinner/> : <ItemDetail product={product}/>}

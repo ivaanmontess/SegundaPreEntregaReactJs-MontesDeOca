@@ -5,7 +5,7 @@
         "price": 300,
         "image": "/assets/img/11.webp",
         "stock": 10,
-        "category":"Apple",
+        "category":"apple",
         "description": "iPhone 64gb 100% bateria"
 
     },
@@ -15,7 +15,7 @@
         "price": 100,
         "image": "/assets/img/xs.jpg",
         "stock": 10,
-        "category":"Apple",
+        "category":"apple",
         "description": "iPhone XS 64gb 100% bateria"
 
     },
@@ -25,7 +25,7 @@
         "price": 450,
         "image": "/assets/img/11-pro-max-modelos.jpg",
         "stock": 10,
-        "category":"Apple",
+        "category":"apple",
         "description": "iPhone PRO MAX 64gb 100% bateria"
 
     },
@@ -35,7 +35,7 @@
         "price": 200,
         "image": "/assets/img/X.jpg",
         "stock": 10,
-        "category":"Apple",
+        "category":"apple",
         "description": "iPhone X 64gb 100% bateria"
 
     }

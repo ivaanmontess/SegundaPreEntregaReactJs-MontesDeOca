@@ -7,7 +7,7 @@ import Error from "./components/Error/Error";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-function App() {
+const App = () => {
   return (
     <>
       <BrowserRouter>
@@ -16,11 +16,14 @@ function App() {
         <Routes>
           <Route path="/" element={<ItemListContainer />} />
 
-          <Route path="/category/:categoryId" element={<ItemListContainer />} />
+          <Route path="/category/:categoryId" element={<ItemListContainer/>}/>
 
-          <Route path="/item/:id" element={<ItemDetailContainer />} />
+          <Route path="/item/:id" element={<ItemDetailContainer/>}/>
 
-          <Route path="*" element={<Error />} />
+          <Route path="*" element={<Error/>}/>
+          
+
+         
         </Routes>
 
         <Footer />

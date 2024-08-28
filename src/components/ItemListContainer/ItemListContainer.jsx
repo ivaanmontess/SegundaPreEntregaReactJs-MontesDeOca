@@ -14,33 +14,29 @@ const ItemListContainer = ({greeting}) => {
   const [loading,setLoading] = useState(true)
 
   useEffect(() => {
-
-    const fetchData = async () => {
-      try{
+    async function fetchData() {
+      try {
         const response = await fetch('/productos.json')
         const data = await response.json()
         
         const filteredProducts = categoryId ? data.filter((p) => p.category === categoryId) : data;
         setProducts(filteredProducts)
-
-
-
-      }catch(error){
+  
+      } catch (error) {
         console.log(error)
-      }finally{
+      } finally {
         setLoading(false)
       }
     }
-
-    fetchData()  
-  },[categoryId])
+    (fetchData)
+  }, [categoryId]) 
 
   console.log(products)
 
   return (
     <div className="container">
       <h1>{greeting}</h1>
-      {loading ? <Spinner/> : <ItemListContainer products={products}/>}
+      {loading ? <Spinner/> : <ItemsList products={products}/>}
     </div>
   )
 }
