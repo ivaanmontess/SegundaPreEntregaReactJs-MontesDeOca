@@ -28,7 +28,7 @@ const ItemListContainer = ({greeting}) => {
         setLoading(false)
       }
     }
-    (fetchData)
+    fetchData()
   }, [categoryId]) 
 
   console.log(products)
