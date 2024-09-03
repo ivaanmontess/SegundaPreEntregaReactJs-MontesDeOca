@@ -2,10 +2,10 @@ import React from 'react'
 import Item from "../Item/Item"
 import "./ItemsList.css"
 
-const ItemsList = ({product}) => {
+const ItemsList = ({products}) => {
   return (
     <div className="card-container">
-    {product.map((item)=> (
+    {products.map((item)=> (
       <Item key={item.id} item={item}/>
     ))}
     </div>
