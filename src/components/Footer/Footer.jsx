@@ -1,25 +1,9 @@
-import './Footer.css'
-import {useState} from "react"
+import React from 'react'
 
 const Footer = () => {
-
-  const [encendido, setEncendido] = useState(false)
-
-  const cambiarEstado = () => {
-    setEncendido (!encendido)
-
-  }
-  console.log(encendido)
-
   return (
-
-    <div className='Footer'>
-      Footer
-      <button onClick={cambiarEstado}>
-        {encendido ? 'apagar' : 'prender'}
-      </button>
-      </div>
+    <div>Footer</div>
   )
 }
 
-export default Footer 
+export default Footer

@@ -10,7 +10,7 @@ const ItemDetail = ({product}) => {
 
   const onAdd = (quantity) => {
     addItems(product, quantity);
-    setShowItemCount(false);
+    setShowItemCount(false); //montado y desmontado de los contadores
   };
   return (
     <div>

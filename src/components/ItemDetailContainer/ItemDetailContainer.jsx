@@ -8,7 +8,7 @@ const ItemDetailContainer = () => {
 
     const [product, setProduct] = useState("")
 
-    const {id} = useParams();
+    const {id} = useParams();  //Le da el id unico a la pagina de cada item
 
     useEffect(() => {
         const db = getFirestore();

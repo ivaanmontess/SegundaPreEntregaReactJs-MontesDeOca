@@ -24,7 +24,7 @@ const App = () => {
       ({id: doc.id, ...doc.data() })));
     });
   }, []);
-  console.log(product);
+  
 
  
   return (
