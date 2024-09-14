@@ -1,11 +1,17 @@
 import "./CartWidget.css"
 import { BsCartCheck } from "react-icons/bs";
+import { useContext } from "react";
+import { CartContext } from "../../context/ThemeContext/CartContext/CartProvider";
+import { Link } from "react-router-dom";
 
 const CartWidget = () => {
+  const { getTotalProduct } = useContext(CartContext);
+
   return (
-    <div className="cart-widget">
+    <Link to={"/cart"} className="cart-widget">
         <BsCartCheck />
-    </div>
+        {getTotalProduct() === 0 ? null : getTotalProduct}
+    </Link>
   )
 }
 

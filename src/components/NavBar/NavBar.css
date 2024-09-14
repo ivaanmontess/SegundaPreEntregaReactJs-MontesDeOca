@@ -1,7 +1,5 @@
 .navbar{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+ 
     background-color: rgb(7, 4, 158);
     padding: 10px 20px;
 }
@@ -22,4 +20,9 @@
     color: white;
     text-decoration: none;
     
+}
+
+.active{
+    color: #3f1d1d;
+    font-weight: bolder;
 }

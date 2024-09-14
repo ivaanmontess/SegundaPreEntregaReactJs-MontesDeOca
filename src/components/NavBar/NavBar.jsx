@@ -11,8 +11,8 @@ const NavBar = () => {
 
       <div className="navbar-links">
         <ul>
-          <li><Link to="/category/apple" className="link">Apple</Link></li>
-          <li><Link to="/category/contact" className="link">Contacto</Link></li>
+          <li><NavLink to="/category/apple" className={({isActive}) => (isActive ? "link active" : "link")}>Apple</NavLink></li>
+          <li><NavLink to="/contact" className={({isActive}) => (isActive ? "link active" : "link")}>Contacto</NavLink></li>
         </ul>
       </div>
 
