@@ -14,22 +14,21 @@ const ItemListContainer = ({greeting}) => {
   
 
   useEffect(() => {
-    setLoading(true)
-
-    const db = getFirestore();
-
-    const myProducts = categoryId ? query(collection(db, "item"),where("category","==",categoryId))
-    : collection(db,"item");
-
-    getDocs(myProducts).then((res) => {
-      const newProducts = res.docs.map((doc) => {
-        const data = doc.data();
-        return {id: doc.id, ...data};
-      });
-      setProducts(newProducts);
-    })
-    .catch((error) => console.log("Error buscando items", error))
-    .finally(() => setLoading(false) );
+    async function fetchData() {
+      try {
+        const response = await fetch('/productos.json')
+        const data = await response.json()
+        
+        const filteredProducts = categoryId ? data.filter((p) => p.category === categoryId) : data;
+        setProducts(filteredProducts)
+  
+      } catch (error) {
+        console.log(error)
+      } finally {
+        setLoading(false)
+      }
+    }
+    fetchData()
   }, [categoryId]) 
 
   console.log(products)
