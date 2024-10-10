@@ -8,8 +8,7 @@ const Item = ({ item }) => {
       <div key={item.id} className="card">
         <img src={item.image} alt={item.name} className="Hola" />
         <h2>{item.name}</h2>
-        <img src={item.image} alt={item.name} className="Hola" />
-        
+        <p>{item.description}</p> {/* Agregué esto para mostrar la descripción del item */}
       </div>
     </Link>
   );

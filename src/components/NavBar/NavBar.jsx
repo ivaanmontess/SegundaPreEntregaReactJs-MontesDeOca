@@ -1,12 +1,16 @@
 import CartWidget from "../CartWidget/CartWidget";
 import "./NavBar.css";
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 const NavBar = () => {
   return (
     <nav className="navbar">
-      <div className="navbar-logo">
-        <Link to="/">MI LOGO</Link>
+      <div className="logo">
+      <Link to="/">
+        <i className="bi bi-phone" /> 
+      </Link>
+
       </div>
 
       <div className="navbar-links">

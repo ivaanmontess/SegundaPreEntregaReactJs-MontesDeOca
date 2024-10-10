@@ -1,4 +1,7 @@
 .card{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 16px;

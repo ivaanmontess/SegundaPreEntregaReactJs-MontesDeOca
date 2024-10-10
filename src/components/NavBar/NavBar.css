@@ -1,28 +1,38 @@
 .navbar{
- 
-    background-color: rgb(7, 4, 158);
+    background: linear-gradient(#09f , rgb(18, 11, 116)) padding-box, linear-gradient(#09f, black) border-box;
     padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
-.navbar-logo{
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
+.logo{
+    width: 10px;
+    height: 10px;
 }
 
 .navbar-links{
-    width: 100%;
+    width: 50%;
+    margin: 0;
+    padding: 0;
     display: flex;
-    justify-content: space-between;
+    list-style: none;
 }
 
 .link{
     color: white;
     text-decoration: none;
-    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .active{
-    color: #3f1d1d;
+    color: #9b2525;
     font-weight: bolder;
+    font-size: larger;
 }

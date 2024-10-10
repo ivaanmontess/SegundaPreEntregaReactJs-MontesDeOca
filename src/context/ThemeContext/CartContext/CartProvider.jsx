@@ -5,12 +5,13 @@ export const CartContext = createContext();
 export const CartProvider = ({ children }) => {
   //FUNCIONES DEL CARRITO DE COMPRAS
   const [cart, setCart] = useState([]);
+  const [checkout, setCheckout] = useState(false);
 
   const addItems = (product, quantity) => { 
     if(isInCart(product.id)){
       setCart(
         cart.map((item) =>
-        item.product.id === product.id ? {...item,quantity: item.quantity + quantity} : item )
+          item.product.id === product.id ? {...item, quantity: item.quantity + quantity} : item )
       )
     } else{
       setCart([...cart, {product, quantity}]);
@@ -37,9 +38,19 @@ export const CartProvider = ({ children }) => {
     setCart(cart.filter((item) => item.product.id !== productId));
   };
 
+  const buy = () => {
+    setCheckout(true);
+    // Enviar la orden de compra al servidor o realizar la acción correspondiente
+    console.log("Orden de compra realizada con éxito!");
+    // Limpiar el carrito después de la compra
+    clearCart();
+  };
 
-
-  return <CartContext.Provider value={{cart, addItems, isInCart, clearCart, getTotal, getTotalProduct, removeItem }}>{children}</CartContext.Provider>;
+  return (
+    <CartContext.Provider value={{ cart, addItems, isInCart, clearCart, getTotal, getTotalProduct, removeItem, buy, checkout }}>
+      {children}
+    </CartContext.Provider>
+  );
 };
 
 export default CartProvider;

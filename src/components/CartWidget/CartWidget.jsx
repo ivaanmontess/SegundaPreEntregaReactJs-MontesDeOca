@@ -10,7 +10,7 @@ const CartWidget = () => {
   return (
     <Link to={"/cart"} className="cart-widget">
         <BsCartCheck />
-        {getTotalProduct() === 0 ? null : getTotalProduct}
+        {getTotalProduct() === 0 ? null : getTotalProduct()}
     </Link>
   )
 }

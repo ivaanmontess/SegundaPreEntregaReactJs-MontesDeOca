@@ -1,10 +1,20 @@
+// CartDetail.js
 import React from 'react'
 import { useContext } from "react";
 import { CartContext } from '../../context/ThemeContext/CartContext/CartProvider';
 import { Link } from "react-router-dom";
 
-const CartDetail = ( { cart } ) => {
-    const { getTotal, getTotalProduct, removeItem, cleanCart, buy } = useContext(CartContext);
+const CartDetail = () => {
+  const { cart, getTotal, getTotalProduct, removeItem, cleanCart, buy, checkout } = useContext(CartContext);
+
+  if (checkout) {
+    return (
+      <div>
+        <h2>Gracias por tu compra!</h2>
+        <p>Tu orden ha sido procesada con éxito.</p>
+      </div>
+    );
+  }
 
   return (
     <div>
@@ -18,13 +28,9 @@ const CartDetail = ( { cart } ) => {
                 <p>Precio: ${item.product.price}</p>
 
                 <button onClick ={() => removeItem(item.product.id)}>Eliminar todo</button>
-                </div>
+            </div>
         ))}
-        <h3>Total productos: {getTotalProduct()}</h3>
-        <h3>Total a pagar: ${getTotal()}</h3>
-        <button onClick={cleanCart}>Vaciar Carrito</button>
-
-        <Link to= {"/checkout"}>Comprar</Link>
+        
 
     </div>
   )
